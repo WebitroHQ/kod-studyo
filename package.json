@@ -19,6 +19,7 @@
     "electron": "^45.5.0",
     "electron-builder": "^26.18.0"
   },
+  "license": "MIT",
   "main": "electron/main.mjs",
   "author": "Webitro",
   "homepage": "https://webitro.com",

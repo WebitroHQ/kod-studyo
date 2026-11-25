@@ -154,4 +154,5 @@ The `build` workflow (`.github/workflows/build.yml`) builds both on GitHub Actio
 
 - **Instrument recordings:** VSCO 2 Community Edition (CC0). The upright piano was recorded by Simon Dalzell (Ivy Audio) / Versilian Studios. The guitar is from Karoryfer Black and Green Guitars (CC0).
 - **Vocal chops:** the vocal chops in `public/kits/phonk` and `public/kits/ankara` were generated with ElevenLabs text-to-speech.
+- **License:** MIT for the code. See [LICENSE](LICENSE) for the bundled assets; the ElevenLabs vocal chops are for non-commercial use.
 - **Made by:** [Webitro](https://webitro.com). Turkish documentation: [README.tr.md](README.tr.md).
