@@ -6,3 +6,4 @@ graphify-out/
 .impeccable/
 __pycache__/
 *.pyc
+CLAUDE.md

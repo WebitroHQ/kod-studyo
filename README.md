@@ -1,79 +1,157 @@
 # Kod Stüdyo
 
-Kodla müzik yapan, FL Studio'nun sade hali bir tarayıcı stüdyosu. Bütün sesler Web Audio ile sentezlenir;
-hazır sample yoktur. AI olmadan tam şarkı üretir, kullanıcı her şeyi elle düzenler, istenirse AI (Claude /
-ElevenLabs) devreye girer.
+**A music studio that makes music with code.** A rule-based composer writes complete songs in 20+ styles with no AI and no API keys. You can edit everything in a step sequencer and mixer. AI agents can drive the same engine over MCP.
 
-## Kurulum
+![Kod Stüdyo](docs/screenshot.jpg)
 
-**Masaüstü uygulaması (önerilen):**
+- Desktop app for **Windows** and **macOS**, plus a **browser mode** for any OS with Node.js.
+- **No API keys needed.** Every sound is synthesized with Web Audio or played from bundled CC0 instrument recordings. Claude and ElevenLabs are optional extras.
+- **Agent-ready:** an MCP server, a CLI and an HTTP API let AI agents generate songs, edit their JSON, render WAV files and open them in your studio window.
 
-- **Windows:** `KodStudyo-<sürüm>-Setup.exe` dosyasını çalıştır. Uygulama imzasız olduğu için SmartScreen
-  "Bilinmeyen yayımcı" diyebilir: "Ek bilgi → Yine de çalıştır".
-- **macOS:** `KodStudyo-<sürüm>-arm64.dmg` (Apple Silicon) ya da `-x64.dmg` (Intel). İmzasız uygulama ilk açılışta
-  engellenirse Uygulamalar'da sağ tık → Aç; olmazsa Terminal'de `xattr -cr /Applications/kod-studyo.app`.
+> The app's interface is currently in Turkish. Agent tools, the CLI and the API accept English and Turkish prompts.
 
-Şarkılar ve WAV'lar `Belgeler/Kod Studyo/exports/` altına kaydedilir (menü: Dosya → Kayıt klasörünü aç).
-API anahtarları isteğe bağlıdır: ⚙ ayarlarından ya da `Belgeler/Kod Studyo/.env` dosyasından.
+---
 
-**Kaynaktan (Node 20+):**
+## For AI agents: install and connect
 
-```bash
-npm install
-npm run app      # masaüstü uygulaması (Electron)
-npm start        # yalnızca sunucu: http://localhost:4209 (tarayıcıda aç)
+If a user gave you this repository link and asked you to install Kod Stüdyo, do the following.
+
+**1. Run the installer for the user's OS.** It downloads the latest release, installs the app for the current user (no admin rights), and registers the `kod-studyo` MCP server with Claude Code if the `claude` CLI is available.
+
+Windows (PowerShell):
+
+```powershell
+irm https://raw.githubusercontent.com/WebitroHQ/kod-studyo/main/scripts/install.ps1 | iex
 ```
 
-**Paketleri derlemek:** `npm run dist:win` (Windows'ta) → `dist/KodStudyo-*-Setup.exe`;
-`npm run dist:mac` yalnızca macOS'ta çalışır. İkisi birden: GitHub Actions'ta `build` iş akışı
-(`.github/workflows/build.yml`, elle ya da `v*` etiketiyle) Windows ve macOS paketlerini üretir.
+macOS:
 
-## Yapay zekâ ajanları
+```bash
+curl -fsSL https://raw.githubusercontent.com/WebitroHQ/kod-studyo/main/scripts/install.sh | bash
+```
 
-Ajanlar (Claude Code, Claude Desktop, Cursor…) stüdyoyu kullanıcıyla aynı motorla kullanır: şarkı üretir,
-JSON'unu düzenler, WAV'a render eder ve kullanıcının stüdyo penceresinde açar. Ayrıntı: [AGENTS.md](AGENTS.md).
-Kurulum komutu uygulamada hazır: **Ajan → Yapay zekâ ajanı bağla (MCP)** (kopyala-yapıştır).
+Linux (installs from source; needs git, Node.js 20+, and Chrome, Edge or Chromium for rendering):
 
-AI anahtarları isteğe bağlıdır: arayüzdeki ⚙ ayarlarından ya da `.env` dosyasından (`.env.example`'a bakın).
+```bash
+curl -fsSL https://raw.githubusercontent.com/WebitroHQ/kod-studyo/main/scripts/install.sh | bash
+```
 
-## Neler var
+If the repository is private and the raw URLs return 404, the user's GitHub account must have access. Sign in with `gh auth login`, then run the same script from a clone:
 
-- **Şarkı iste (Suno modu):** tek kutuya yaz, ElevenLabs Music vokalli ya da enstrümantal tam şarkı üretsin.
-  Tarz şablonu seçince o tarzın tipik enstrümanları otomatik işaretlenir, yazdığın enstrümanlar
-  (akustik, keman, bağlama…) algılanır. "Önce planla" ücretsizdir: bölümleri ve sözleri görüp düzenleyebilirsin.
-  Üretilenler `exports/sarkilar/` klasörüne kaydedilir ve "Stüdyoya ekle" ile sampler kanalı olur.
-  Aynı istek "Kod motoruyla yap" ile AI'sız olarak stüdyoda da üretilir.
-- **Enstrümantasyon bilgi tabanı** (`public/js/instrumentation.js`): tarz → tipik enstrümanlar, kelime → enstrüman, hazır kanal preset'leri.
+```bash
+gh repo clone WebitroHQ/kod-studyo && cd kod-studyo
+bash scripts/install.sh               # macOS / Linux
+powershell -File scripts/install.ps1  # Windows
+```
 
-- **Kendi motoru (AI'sız):** 20 tarz profili (Rock, Akustik pop, Arabesk/Türk pop dahil); 25 enstrüman (elektro gitar preset'leri, akustik, bas gitar, bağlama, yaylılar, org, brass, flüt…); Brazilian / Drift / Memphis Phonk ve RJ Pasin tarzı (gitar + glitch)
-  öne çıkarılmış; Trap, Drill, Boom Bap, Lo-fi, House, Techno, DnB, Synthwave, Hyperpop, Ambient, Reggaeton,
-  Afrobeats, Pop. Seed ile tekrarlanabilir üretim; kanal başına 🎲 ile tek parçayı yeniden üretme.
-- **Yazarak isteme:** "karanlık brazilian phonk 130 bpm, ağır 808, vokalsiz" → anahtarsız çözücü veya Claude.
-- **Stüdyo:** aranjman (bölüm/desen/tekrar), kanal rafı (step sequencer, roll/ratchet), ölçeğe kilitli piyano
-  rulosu (glide), enstrüman parametreleri, mikser (pan, reverb, delay, sidechain duck), master zinciri
-  (EQ, saturasyon, glue, limiter) ve hedef loudness'a göre **Oto-Master**.
-- **Vokal:** kodla formant sentezli vokal chop; sözlü vokal / efekt / müzik parçası için ElevenLabs (sampler kanalına düşer).
-- **Dışa aktarma:** WAV, proje JSON (kaydet/aç), geri al (Ctrl+Z), Boşluk = çal/durdur.
+The scripts use `gh` for downloads when it is signed in.
 
-Ayrıntılı plan ve yol haritası: [PLAN.md](PLAN.md).
+**2. Connect the MCP server**, if the installer didn't do it automatically (it prints the exact command and arguments).
 
-## Gerçek enstrüman kitleri
+Windows:
 
-`node tools/vsco-indir.mjs` [VSCO 2 Community Edition](https://github.com/sgossner/VSCO-2-CE) (CC0) içinden
-upright piyano, keman/çello seksiyonu, arp ve flütü indirir, MP3'e çevirir ve `public/kits/<kit>/kit.json`
-olarak hazırlar. Upright piyano kaydı Simon Dalzell (Ivy Audio) / Versilian Studios'a aittir; atıf teşvik ediliyor.
-Stüdyoda "Kayıtlı Enstrüman (kit)" kanalı bu kitleri çalar; seviyeler yüklenirken otomatik normalize edilir.
+```bash
+claude mcp add kod-studyo -s user -e ELECTRON_RUN_AS_NODE=1 -- "%LOCALAPPDATA%\Programs\kod-studyo\kod-studyo.exe" "%LOCALAPPDATA%\Programs\kod-studyo\resources\app\bin\kod-studyo.mjs" mcp
+```
 
-## Araçlar
+macOS:
 
-- `python tools/analiz.py exports/sarki.wav` — frekans bantları, dinamik, stereo ve bas mono uyumu teşhisi
-- `node tools/kit-uret.mjs phonk` — ElevenLabs (ücretsiz plan) TTS ile vokal nidası kiti
-- `node compositions/uzun-sakin.mjs [seed] [--gercek]` — kendini tekrar etmeyen uzun sakin parça
+```bash
+claude mcp add kod-studyo -s user -e ELECTRON_RUN_AS_NODE=1 -- /Applications/kod-studyo.app/Contents/MacOS/kod-studyo /Applications/kod-studyo.app/Contents/Resources/app/bin/kod-studyo.mjs mcp
+```
 
-## Formül sekmesi
+From source, on any OS:
 
-Matematiksel ifadelerden şarkı: her bölüm x ∈ [−4.25, 4.25] aralığını süresi boyunca tarar, ses ifadeleri y döndürür
-(y = 0 → E4, y = 1 bir oktav yukarı; `REST` = sus). Ses örnek örnek hesaplanır, grafik videodaki gibi çizilir.
-Yardımcılar: `floor mod frac exp digit(N, taban, i) seg(p, [[nota, a, b], …]) note(m) midi(m)`.
-Hazır: matharium videosundaki 5 bölüm (`compositions/matharium.py` ile aynı formüller), pentatonik merdiven, Eno döngüleri.
+```bash
+claude mcp add kod-studyo -s user -- node /path/to/kod-studyo/bin/kod-studyo.mjs mcp
+```
 
+For Claude Desktop, Cursor and other MCP clients, use the same command, args and env in their `mcpServers` config (see [AGENTS.md](AGENTS.md)). Restart the agent session so the new tools load.
+
+**3. Verify.** Call the `studio_status` tool. Then call `generate_song` with `{"prompt": "calm lofi with piano", "length": 1}`. It returns the path of a rendered WAV file.
+
+The app does not need to be running: the first tool call starts it in the background (tray icon, no window). Full tool reference: [AGENTS.md](AGENTS.md).
+
+---
+
+## Install (people)
+
+Download from [Releases](https://github.com/WebitroHQ/kod-studyo/releases):
+
+| OS | File |
+|---|---|
+| Windows 10/11 | `KodStudyo-<version>-Setup.exe` |
+| macOS, Apple Silicon | `KodStudyo-<version>-arm64.dmg` |
+| macOS, Intel | `KodStudyo-<version>-x64.dmg` |
+
+The builds are not code-signed by a paid certificate:
+
+- **Windows** may say *"Windows protected your PC"*. Click **More info → Run anyway**.
+- **macOS** may say the app *"can't be opened"*. Right-click the app → **Open**, or run `xattr -cr /Applications/kod-studyo.app`. The install script does this for you.
+
+Songs and WAV files are saved to `Documents/Kod Studyo/exports/`. Optional API keys go in the settings dialog (⚙) or in `Documents/Kod Studyo/.env`.
+
+## Run from source
+
+```bash
+git clone https://github.com/WebitroHQ/kod-studyo.git
+cd kod-studyo
+npm install
+npm run app      # desktop app (Electron)
+npm start        # server only: open http://localhost:4209 in a browser
+```
+
+## Features
+
+- **Rule-based composer (no AI):**
+  - 20+ style profiles: Brazilian / drift / Memphis phonk, trap, drill, boom bap, lo-fi, house, techno, drum & bass, synthwave, hyperpop, ambient, reggaeton, afrobeats, pop, rock, acoustic, Turkish arabesk and more.
+  - Seeded, so the same seed gives the same song.
+  - Re-roll any single track.
+- **Write it in words:** for example *"dark brazilian phonk 130 bpm, heavy 808, no vocals"*. Style, tempo, key, mood and instruments are detected from the text.
+- **Studio:**
+  - Arrangement of sections, patterns and repeats.
+  - Step sequencer with rolls and ratchets.
+  - Scale-locked piano roll with glide.
+  - 25+ instruments: guitars, bass, bağlama, strings, brass, flute, 808, FM bells…
+  - Mixer with pan, reverb, delay and sidechain ducking.
+  - Master chain: EQ, saturation, glue compressor, limiter, tape wow.
+  - Loudness-targeted **auto-master**.
+- **Real instruments:** CC0 multisample kits are bundled:
+  - Upright piano, violins, cellos, harp and flute from [VSCO 2 CE](https://github.com/sgossner/VSCO-2-CE).
+  - A Gretsch electric guitar from [Karoryfer](https://github.com/sfzinstruments/karoryfer.black-and-green-guitars).
+- **Formula songs:** music written entirely as math. Every voice is an expression evaluated per sample. Presets use primes, π, φ, the Collatz sequence and Eno-style phasing loops.
+- **Optional AI:**
+  - Claude composes and edits songs as structured JSON.
+  - ElevenLabs adds vocals, sound effects and full songs.
+  - Both need your own API keys; everything else works without them.
+- **Export:** WAV, project JSON, undo.
+
+## Project layout
+
+| Path | What it is |
+|---|---|
+| `public/` | The studio UI and audio engine (Web Audio): `engine.js`, `instruments.js`, `generator.js`, `genres.js`, `formula.js` |
+| `server.mjs` | Local server: static files, optional AI proxy, agent API |
+| `lib/agent.mjs` | Agent HTTP API and render queue |
+| `lib/mcp.mjs` | MCP server (stdio) |
+| `bin/kod-studyo.mjs` | CLI |
+| `public/worker.html` | Render worker. Agent renders run here, in a hidden app window or a headless Chrome/Edge. |
+| `electron/` | Desktop app shell |
+| `scripts/` | Install scripts |
+| `compositions/` | Hand-written example songs (`node compositions/<name>.mjs`) |
+| `tools/` | Audio analysis helpers (Python) |
+
+## Building installers
+
+```bash
+npm run dist:win   # on Windows → dist/KodStudyo-<version>-Setup.exe
+npm run dist:mac   # on macOS   → dist/KodStudyo-<version>-<arch>.dmg / .zip
+```
+
+The `build` workflow (`.github/workflows/build.yml`) builds both on GitHub Actions. Pushing a `v*` tag publishes a release, which is where the install scripts download from.
+
+## Credits
+
+- **Instrument recordings:** VSCO 2 Community Edition (CC0). The upright piano was recorded by Simon Dalzell (Ivy Audio) / Versilian Studios. The guitar is from Karoryfer Black and Green Guitars (CC0).
+- **Vocal chops:** the vocal chops in `public/kits/phonk` and `public/kits/ankara` were generated with ElevenLabs text-to-speech.
+- **Made by:** [Webitro](https://webitro.com). Turkish documentation: [README.tr.md](README.tr.md).

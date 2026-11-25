@@ -1,7 +1,7 @@
 {
   "name": "kod-studyo",
   "version": "0.2.0",
-  "description": "Kodla müzik üreten stüdyo: kural tabanlı besteci, step sequencer, mikser, formül şarkıları; yapay zekâ ajanları için MCP ve HTTP API.",
+  "description": "A music studio that makes music with code: rule-based composer, step sequencer, mixer and formula songs, with MCP, CLI and HTTP API for AI agents.",
   "type": "module",
   "private": true,
   "scripts": {
@@ -99,5 +99,9 @@
       "category": "Audio",
       "icon": "build/icon.png"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebitroHQ/kod-studyo.git"
   }
 }

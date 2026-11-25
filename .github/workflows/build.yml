@@ -1,12 +1,16 @@
-# Kod Stüdyo masaüstü paketleri: Windows (NSIS kurulum) ve macOS (dmg + zip, Apple Silicon + Intel).
-# macOS paketi yalnızca macOS üzerinde derlenebildiği için GitHub Actions'ta üretilir.
-# Elle çalıştır: Actions → build → Run workflow. "v*" etiketi itilince de çalışır ve sürüm taslağına ekler.
+# Desktop builds: Windows (NSIS installer) and macOS (dmg + zip, Apple Silicon + Intel).
+# macOS builds only run on macOS, so they are produced here on GitHub Actions.
+# Run manually (Actions → build → Run workflow) to get artifacts, or push a "v*" tag to publish a release
+# that scripts/install.ps1 and scripts/install.sh download from.
 name: build
 
 on:
   workflow_dispatch:
   push:
     tags: ['v*']
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -34,3 +38,11 @@ jobs:
             dist/*.dmg
             dist/*.zip
           if-no-files-found: error
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.exe
+            dist/*.dmg
+            dist/*.zip
