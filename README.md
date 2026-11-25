@@ -11,7 +11,7 @@ ElevenLabs) devreye girer.
 - **Windows:** `KodStudyo-<sürüm>-Setup.exe` dosyasını çalıştır. Uygulama imzasız olduğu için SmartScreen
   "Bilinmeyen yayımcı" diyebilir: "Ek bilgi → Yine de çalıştır".
 - **macOS:** `KodStudyo-<sürüm>-arm64.dmg` (Apple Silicon) ya da `-x64.dmg` (Intel). İmzasız uygulama ilk açılışta
-  engellenirse Uygulamalar'da sağ tık → Aç; olmazsa Terminal'de `xattr -cr "/Applications/Kod Studyo.app"`.
+  engellenirse Uygulamalar'da sağ tık → Aç; olmazsa Terminal'de `xattr -cr /Applications/kod-studyo.app`.
 
 Şarkılar ve WAV'lar `Belgeler/Kod Studyo/exports/` altına kaydedilir (menü: Dosya → Kayıt klasörünü aç).
 API anahtarları isteğe bağlıdır: ⚙ ayarlarından ya da `Belgeler/Kod Studyo/.env` dosyasından.

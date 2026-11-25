@@ -35,8 +35,8 @@ claude mcp add kod-studyo -s user -e ELECTRON_RUN_AS_NODE=1 -- "%LOCALAPPDATA%\P
 {
   "mcpServers": {
     "kod-studyo": {
-      "command": "/Applications/Kod Studyo.app/Contents/MacOS/kod-studyo",
-      "args": ["/Applications/Kod Studyo.app/Contents/Resources/app/bin/kod-studyo.mjs", "mcp"],
+      "command": "/Applications/kod-studyo.app/Contents/MacOS/kod-studyo",
+      "args": ["/Applications/kod-studyo.app/Contents/Resources/app/bin/kod-studyo.mjs", "mcp"],
       "env": { "ELECTRON_RUN_AS_NODE": "1" }
     }
   }
