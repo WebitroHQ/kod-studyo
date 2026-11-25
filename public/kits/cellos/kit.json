@@ -1,0 +1,138 @@
+{
+ "kit": "cellos",
+ "label": "Çello seksiyonu (sustain, vibrato)",
+ "license": "CC0 1.0 (VSCO 2 Community Edition, Versilian Studios)",
+ "source": "https://github.com/sgossner/VSCO-2-CE/tree/master/Strings/Cello Section/susvib",
+ "zones": [
+  {
+   "note": 24,
+   "vel": 1,
+   "file": "susvib_C1_v1_1.mp3"
+  },
+  {
+   "note": 28,
+   "vel": 1,
+   "file": "susvib_E1_v1_1.mp3"
+  },
+  {
+   "note": 31,
+   "vel": 1,
+   "file": "susvib_G1_v1_1.mp3"
+  },
+  {
+   "note": 35,
+   "vel": 1,
+   "file": "susvib_B1_v1_1.mp3"
+  },
+  {
+   "note": 38,
+   "vel": 1,
+   "file": "susvib_D2_v1_1.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 1,
+   "file": "susvib_F2_v1_1.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 1,
+   "file": "susvib_A2_v1_1.mp3"
+  },
+  {
+   "note": 48,
+   "vel": 1,
+   "file": "susvib_C3_v1_1.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 1,
+   "file": "susvib_E3_v1_1.mp3"
+  },
+  {
+   "note": 55,
+   "vel": 1,
+   "file": "susvib_G3_v1_1.mp3"
+  },
+  {
+   "note": 59,
+   "vel": 1,
+   "file": "susvib_B3_v1_1.mp3"
+  },
+  {
+   "note": 62,
+   "vel": 1,
+   "file": "susvib_D4_v1_1.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 1,
+   "file": "susvib_F4_v1_1.mp3"
+  },
+  {
+   "note": 24,
+   "vel": 2,
+   "file": "susvib_C1_v3_1.mp3"
+  },
+  {
+   "note": 28,
+   "vel": 2,
+   "file": "susvib_E1_v3_1.mp3"
+  },
+  {
+   "note": 31,
+   "vel": 2,
+   "file": "susvib_G1_v3_1.mp3"
+  },
+  {
+   "note": 35,
+   "vel": 2,
+   "file": "susvib_B1_v3_1.mp3"
+  },
+  {
+   "note": 38,
+   "vel": 2,
+   "file": "susvib_D2_v3_1.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 2,
+   "file": "susvib_F2_v3_1.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 2,
+   "file": "susvib_A2_v3_1.mp3"
+  },
+  {
+   "note": 48,
+   "vel": 2,
+   "file": "susvib_C3_v3_1.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 2,
+   "file": "susvib_E3_v3_1.mp3"
+  },
+  {
+   "note": 55,
+   "vel": 2,
+   "file": "susvib_G3_v3_1.mp3"
+  },
+  {
+   "note": 59,
+   "vel": 2,
+   "file": "susvib_B3_v3_1.mp3"
+  },
+  {
+   "note": 62,
+   "vel": 2,
+   "file": "susvib_D4_v3_1.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 2,
+   "file": "susvib_F4_v3_1.mp3"
+  }
+ ]
+}

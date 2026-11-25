@@ -1,0 +1,103 @@
+{
+  "name": "kod-studyo",
+  "version": "0.2.0",
+  "description": "Kodla müzik üreten stüdyo: kural tabanlı besteci, step sequencer, mikser, formül şarkıları; yapay zekâ ajanları için MCP ve HTTP API.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs",
+    "app": "electron .",
+    "mcp": "node bin/kod-studyo.mjs mcp",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0"
+  },
+  "devDependencies": {
+    "electron": "^45.5.0",
+    "electron-builder": "^26.18.0"
+  },
+  "main": "electron/main.mjs",
+  "author": "Webitro",
+  "homepage": "https://webitro.com",
+  "bin": {
+    "kod-studyo": "bin/kod-studyo.mjs"
+  },
+  "build": {
+    "appId": "com.webitro.kodstudyo",
+    "productName": "Kod Studyo",
+    "executableName": "kod-studyo",
+    "copyright": "© 2026 Webitro",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "lib/**",
+      "bin/**",
+      "public/**",
+      "server.mjs",
+      "package.json",
+      "build/icon.png",
+      "!**/*.map"
+    ],
+    "asar": false,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "KodStudyo-${version}-Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Kod Stüdyo",
+      "installerLanguages": [
+        "tr_TR",
+        "en_US"
+      ],
+      "language": "1055"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "category": "public.app-category.music",
+      "icon": "build/icon.png",
+      "artifactName": "KodStudyo-${version}-${arch}.${ext}",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Audio",
+      "icon": "build/icon.png"
+    }
+  }
+}

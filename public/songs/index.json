@@ -1,0 +1,62 @@
+[
+  {
+    "file": "final-take-wrap.json",
+    "name": "Final Take — That's a Wrap (fanfare, Claude besteledi)"
+  },
+  {
+    "file": "final-take-set.json",
+    "name": "Final Take — On Set (spy jazz loop, Claude besteledi)"
+  },
+  {
+    "file": "tron6-reklam.json",
+    "name": "TRON 6 — Işık (reklam filmi müziği, Claude)"
+  },
+  {
+    "file": "dolunay.json",
+    "name": "Dolunay — Full Moon 2.0 tarzında özgün parça (Claude)"
+  },
+  {
+    "file": "rj-neon-gitar.json",
+    "name": "Neon Yağmur — gerçek Gretsch gitar + piyano/arp/yaylılar (Claude besteledi)"
+  },
+  {
+    "file": "rj-neon.json",
+    "name": "Neon Yağmur — RJ esintisi, gerçek piyano/arp/yaylılar (Claude besteledi)"
+  },
+  {
+    "file": "ankara-oyun.json",
+    "name": "Ankara Gecesi — yeni nesil Ankara rap oyun havası (Claude besteledi)"
+  },
+  {
+    "file": "uzun-sakin-gercek.json",
+    "name": "Uzun Sakin Oda — gerçek enstrümanlar (upright piyano, yaylılar, arp), ~8 dk"
+  },
+  {
+    "file": "uzun-sakin.json",
+    "name": "Uzun Sakin Oda — ~8 dk, kendini tekrar etmeyen çalışma müziği (Claude)"
+  },
+  {
+    "file": "gece-phonk-v2.json",
+    "name": "Gece Vardiyası v2 — Brazilian phonk, gerçek vokal nidalı (Claude besteledi)"
+  },
+  {
+    "file": "gece-phonk.json",
+    "name": "Gece Vardiyası — Brazilian phonk (Claude besteledi)"
+  },
+  {
+    "file": "sakin-calisma.json",
+    "name": "Sakin Oda — çalışırken dinlemelik, Minecraft havası (Claude besteledi)"
+  },
+  {
+    "file": "yuksek-skor.json",
+    "name": "Yüksek Skor — RJ esintisi, math/emo gitar trap (Claude besteledi)"
+  },
+  {
+    "file": "bogaz-isiklari.json",
+    "name": "Boğaz Işıkları — RJ esintisi × hicaz (Claude besteledi)"
+  },
+  {
+    "file": "rj-esinti.json",
+    "name": "Gece Sürüşü — RJ Pasin esintisi (Claude besteledi)"
+  }
+]

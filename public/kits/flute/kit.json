@@ -1,0 +1,58 @@
+{
+ "kit": "flute",
+ "label": "Flüt (sustain, vibrato)",
+ "license": "CC0 1.0 (VSCO 2 Community Edition, Versilian Studios)",
+ "source": "https://github.com/sgossner/VSCO-2-CE/tree/master/Woodwinds/Flute/susvib",
+ "zones": [
+  {
+   "note": 48,
+   "vel": 1,
+   "file": "LDFlute_susvib_C3_v1_1.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 1,
+   "file": "LDFlute_susvib_E3_v1_1.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 1,
+   "file": "LDFlute_susvib_A3_v1_1.mp3"
+  },
+  {
+   "note": 60,
+   "vel": 1,
+   "file": "LDFlute_susvib_C4_v1_1.mp3"
+  },
+  {
+   "note": 64,
+   "vel": 1,
+   "file": "LDFlute_susvib_E4_v1_1.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 1,
+   "file": "LDFlute_susvib_A4_v1_1.mp3"
+  },
+  {
+   "note": 72,
+   "vel": 1,
+   "file": "LDFlute_susvib_C5_v1_1.mp3"
+  },
+  {
+   "note": 76,
+   "vel": 1,
+   "file": "LDFlute_susvib_E5_v1_1.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 1,
+   "file": "LDFlute_susvib_A5_v1_1.mp3"
+  },
+  {
+   "note": 84,
+   "vel": 1,
+   "file": "LDFlute_susvib_C6_v1_1.mp3"
+  }
+ ]
+}

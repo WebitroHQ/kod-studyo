@@ -1,0 +1,103 @@
+{
+ "kit": "harp",
+ "label": "Arp",
+ "license": "CC0 1.0 (VSCO 2 Community Edition, Versilian Studios)",
+ "source": "https://github.com/sgossner/VSCO-2-CE/tree/master/Strings/Harp",
+ "zones": [
+  {
+   "note": 35,
+   "vel": 1,
+   "file": "KSHarp_B1_mf.mp3"
+  },
+  {
+   "note": 38,
+   "vel": 1,
+   "file": "KSHarp_D2_mf.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 1,
+   "file": "KSHarp_F2_mf.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 1,
+   "file": "KSHarp_A2_mf.mp3"
+  },
+  {
+   "note": 48,
+   "vel": 1,
+   "file": "KSHarp_C3_mf.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 1,
+   "file": "KSHarp_E3_mf.mp3"
+  },
+  {
+   "note": 55,
+   "vel": 1,
+   "file": "KSHarp_G3_mf.mp3"
+  },
+  {
+   "note": 59,
+   "vel": 1,
+   "file": "KSHarp_B3_mf.mp3"
+  },
+  {
+   "note": 62,
+   "vel": 1,
+   "file": "KSHarp_D4_mf.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 1,
+   "file": "KSHarp_F4_mf.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 1,
+   "file": "KSHarp_A4_mf.mp3"
+  },
+  {
+   "note": 72,
+   "vel": 1,
+   "file": "KSHarp_C5_mf.mp3"
+  },
+  {
+   "note": 76,
+   "vel": 1,
+   "file": "KSHarp_E5_mf.mp3"
+  },
+  {
+   "note": 79,
+   "vel": 1,
+   "file": "KSHarp_G5_mf.mp3"
+  },
+  {
+   "note": 83,
+   "vel": 1,
+   "file": "KSHarp_B5_mf.mp3"
+  },
+  {
+   "note": 86,
+   "vel": 1,
+   "file": "KSHarp_D6_mf.mp3"
+  },
+  {
+   "note": 89,
+   "vel": 1,
+   "file": "KSHarp_F6_mf.mp3"
+  },
+  {
+   "note": 93,
+   "vel": 1,
+   "file": "KSHarp_A6_mf.mp3"
+  },
+  {
+   "note": 95,
+   "vel": 1,
+   "file": "KSHarp_B6_mf.mp3"
+  }
+ ]
+}

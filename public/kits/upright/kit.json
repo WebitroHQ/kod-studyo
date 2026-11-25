@@ -1,0 +1,353 @@
+{
+ "kit": "upright",
+ "label": "Upright piyano (Ivy Audio / VSCO 2 CE)",
+ "license": "CC0 1.0 (VSCO 2 Community Edition, Versilian Studios)",
+ "source": "https://github.com/sgossner/VSCO-2-CE/tree/master/Keys/Upright Piano",
+ "zones": [
+  {
+   "note": 21,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_000.mp3"
+  },
+  {
+   "note": 25,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_002.mp3"
+  },
+  {
+   "note": 29,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_004.mp3"
+  },
+  {
+   "note": 33,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_006.mp3"
+  },
+  {
+   "note": 37,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_008.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_010.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_012.mp3"
+  },
+  {
+   "note": 49,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_014.mp3"
+  },
+  {
+   "note": 53,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_016.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_018.mp3"
+  },
+  {
+   "note": 61,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_020.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_022.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_024.mp3"
+  },
+  {
+   "note": 73,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_026.mp3"
+  },
+  {
+   "note": 77,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_028.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_030.mp3"
+  },
+  {
+   "note": 85,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_032.mp3"
+  },
+  {
+   "note": 89,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_034.mp3"
+  },
+  {
+   "note": 93,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_036.mp3"
+  },
+  {
+   "note": 97,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_038.mp3"
+  },
+  {
+   "note": 101,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_040.mp3"
+  },
+  {
+   "note": 105,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_042.mp3"
+  },
+  {
+   "note": 109,
+   "vel": 1,
+   "file": "Player_dyn1_rr1_044.mp3"
+  },
+  {
+   "note": 21,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_000.mp3"
+  },
+  {
+   "note": 25,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_002.mp3"
+  },
+  {
+   "note": 29,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_004.mp3"
+  },
+  {
+   "note": 33,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_006.mp3"
+  },
+  {
+   "note": 37,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_008.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_010.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_012.mp3"
+  },
+  {
+   "note": 49,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_014.mp3"
+  },
+  {
+   "note": 53,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_016.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_018.mp3"
+  },
+  {
+   "note": 61,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_020.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_022.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_024.mp3"
+  },
+  {
+   "note": 73,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_026.mp3"
+  },
+  {
+   "note": 77,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_028.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_030.mp3"
+  },
+  {
+   "note": 85,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_032.mp3"
+  },
+  {
+   "note": 89,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_034.mp3"
+  },
+  {
+   "note": 93,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_036.mp3"
+  },
+  {
+   "note": 97,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_038.mp3"
+  },
+  {
+   "note": 101,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_040.mp3"
+  },
+  {
+   "note": 105,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_042.mp3"
+  },
+  {
+   "note": 109,
+   "vel": 2,
+   "file": "Player_dyn2_rr1_044.mp3"
+  },
+  {
+   "note": 21,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_000.mp3"
+  },
+  {
+   "note": 25,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_002.mp3"
+  },
+  {
+   "note": 29,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_004.mp3"
+  },
+  {
+   "note": 33,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_006.mp3"
+  },
+  {
+   "note": 37,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_008.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_010.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_012.mp3"
+  },
+  {
+   "note": 49,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_014.mp3"
+  },
+  {
+   "note": 53,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_016.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_018.mp3"
+  },
+  {
+   "note": 61,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_020.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_022.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_024.mp3"
+  },
+  {
+   "note": 73,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_026.mp3"
+  },
+  {
+   "note": 77,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_028.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_030.mp3"
+  },
+  {
+   "note": 85,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_032.mp3"
+  },
+  {
+   "note": 89,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_034.mp3"
+  },
+  {
+   "note": 93,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_036.mp3"
+  },
+  {
+   "note": 97,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_038.mp3"
+  },
+  {
+   "note": 101,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_040.mp3"
+  },
+  {
+   "note": 105,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_042.mp3"
+  },
+  {
+   "note": 109,
+   "vel": 3,
+   "file": "Player_dyn3_rr1_044.mp3"
+  }
+ ]
+}

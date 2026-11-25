@@ -1,0 +1,630 @@
+{
+ "name": "Göksel Cephane — diyar sesleri",
+ "timbre": "saw",
+ "gap": 0.3,
+ "sections": [
+  {
+   "name": "rift_enter",
+   "duration": 2.8,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\n",
+   "voices": [
+    {
+     "name": "süpürme",
+     "timbre": "saw",
+     "gain": 0.22,
+     "expr": "[hz(60 + 900 * exp(-2.2 * t)), exp(-1.1 * t) * min(1, t * 30)]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "rüzgar",
+     "timbre": "triangle",
+     "gain": 0.14,
+     "expr": "[J(400, 220, 1), Math.pow(sin(PI * min(1, t / D)), 2)]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "rüzgar 2",
+     "timbre": "sine",
+     "gain": 0.12,
+     "expr": "[J(900, 300, 2), Math.pow(sin(PI * min(1, t / D)), 2)]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "gümbür",
+     "timbre": "sine",
+     "gain": 0.45,
+     "expr": "[hz(40 + 35 * exp(-5 * t)), exp(-1.6 * t) * min(1, t * 40)]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "parıltı",
+     "timbre": "triangle",
+     "gain": 0.07,
+     "expr": "[hz(1400 - 500 * t) + 0.03 * sin(TAU * 7 * t), exp(-1.5 * t)]",
+     "color": "#c77dff"
+    }
+   ]
+  },
+  {
+   "name": "abyss_deep",
+   "duration": 7,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = env(1.5, 1.8), k = floor(t * 6), ph = frac(t * 6);",
+   "voices": [
+    {
+     "name": "dip",
+     "timbre": "sine",
+     "gain": 0.35,
+     "expr": "[hz(41) + 0.02 * sin(t * 0.9), e]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "basınç",
+     "timbre": "saw",
+     "gain": 0.1,
+     "expr": "[hz(61.7) + 0.04 * (N1(t * 0.7) - 0.5), e * (0.6 + 0.4 * N1(t * 0.5 + 3))]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "inilti",
+     "timbre": "triangle",
+     "gain": 0.14,
+     "expr": "[hz(120 + 50 * sin(t * 0.55)) + 0.02 * sin(TAU * 4 * t), e * Math.pow(max(0, sin(t * 0.8 - 0.5)), 2)]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "kabarcık",
+     "timbre": "sine",
+     "gain": 0.14,
+     "expr": "H(k) < 0.5 ? [hz(250 + 700 * H(k + 9)) + ph * 1.4, exp(-ph * 10) * e] : REST",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "su",
+     "timbre": "sine",
+     "gain": 0.07,
+     "expr": "[J(180, 60, 4), e * (0.4 + 0.6 * N1(t * 2))]",
+     "color": "#c77dff"
+    }
+   ]
+  },
+  {
+   "name": "abyss_heart",
+   "duration": 1.5,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst t1 = t, t2 = t - 0.3;",
+   "voices": [
+    {
+     "name": "atış 1",
+     "timbre": "sine",
+     "gain": 0.5,
+     "expr": "[hz(36 + 28 * exp(-30 * t1)), exp(-8 * t1) * min(1, t1 * 200)]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "atış 2",
+     "timbre": "sine",
+     "gain": 0.4,
+     "expr": "t2 > 0 ? [hz(34 + 24 * exp(-30 * t2)), 0.8 * exp(-8 * t2) * min(1, t2 * 200)] : REST",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "gövde 1",
+     "timbre": "triangle",
+     "gain": 0.18,
+     "expr": "[hz(72 + 40 * exp(-30 * t1)), exp(-12 * t1)]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "gövde 2",
+     "timbre": "triangle",
+     "gain": 0.14,
+     "expr": "t2 > 0 ? [hz(68 + 36 * exp(-30 * t2)), 0.8 * exp(-12 * t2)] : REST",
+     "color": "#9fd3ff"
+    }
+   ]
+  },
+  {
+   "name": "abyss_wake",
+   "duration": 3.6,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = env(0.6, 0.8), cr = 0.55 + 0.45 * Math.pow(abs(sin(TAU * 7 * t + 3 * N1(t * 3))), 3);",
+   "voices": [
+    {
+     "name": "gıcırtı",
+     "timbre": "saw",
+     "gain": 0.25,
+     "expr": "[hz(50 + 18 * t / D) + 0.12 * sin(TAU * 22 * t) * N1(t * 6), e * cr]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "gıcırtı 2",
+     "timbre": "saw",
+     "gain": 0.15,
+     "expr": "[hz(75.5 + 24 * t / D) + 0.1 * sin(TAU * 29 * t), e * cr * 0.8]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "homurtu",
+     "timbre": "square",
+     "gain": 0.08,
+     "expr": "[hz(112 + 30 * t / D) + 0.08 * sin(TAU * 17 * t), e * 0.6]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "alt",
+     "timbre": "sine",
+     "gain": 0.3,
+     "expr": "[hz(38), e]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "ıslaklık",
+     "timbre": "triangle",
+     "gain": 0.07,
+     "expr": "[J(250, 150, 3), e * cr * 0.5]",
+     "color": "#c77dff"
+    }
+   ]
+  },
+  {
+   "name": "abyss_roar",
+   "duration": 4.6,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = min(1, t / 0.35) * exp(-0.22 * t) * min(1, max(0, (D - t) / 0.9));\nconst c = 0.12 * sin(PI * min(1, t / D)) - 0.15 * t / D;\nconst gr = 0.22 * sin(TAU * 33 * t) * (0.4 + 0.6 * N1(t * 9));",
+   "voices": [
+    {
+     "name": "gövde",
+     "timbre": "saw",
+     "gain": 0.3,
+     "expr": "[hz(50) + c + gr, e]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "boğaz",
+     "timbre": "square",
+     "gain": 0.14,
+     "expr": "[hz(75) + c + gr * 0.8 + 0.01 * sin(TAU * 5 * t), e]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "üst",
+     "timbre": "saw",
+     "gain": 0.12,
+     "expr": "[hz(150) + c * 1.3 + gr * 0.6, e * (0.5 + 0.5 * N1(t * 4))]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "alt",
+     "timbre": "sine",
+     "gain": 0.4,
+     "expr": "[hz(36) + c * 0.5, e]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "nefes",
+     "timbre": "triangle",
+     "gain": 0.1,
+     "expr": "[J(400, 200, 5), e * (0.5 + 0.5 * N1(t * 25))]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "hırıltı",
+     "timbre": "saw",
+     "gain": 0.08,
+     "expr": "[J(160, 120, 6), e]",
+     "color": "#f4f1ea"
+    },
+    {
+     "name": "yankı",
+     "timbre": "triangle",
+     "gain": 0.06,
+     "expr": "[hz(300) + c + gr * 0.4, e * 0.6 * N1(t * 3 + 7)]",
+     "color": "#ff9b87"
+    }
+   ]
+  },
+  {
+   "name": "ember_lava",
+   "duration": 7,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = env(0.8, 1.2), k = floor(t * 45), pk = frac(t * 45), j = floor(t * 3.3), pj = frac(t * 3.3);",
+   "voices": [
+    {
+     "name": "çatırtı",
+     "timbre": "noise",
+     "gain": 0.2,
+     "expr": "[0, H(k) < 0.16 ? exp(-pk * 10) * e * (0.4 + 0.6 * H(k + 3)) : 0]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "blop",
+     "timbre": "sine",
+     "gain": 0.32,
+     "expr": "[hz(70 + 110 * H(j + 5)) + pj * 0.9, (H(j) < 0.75 ? exp(-pj * 7) : 0) * e]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "blop 2",
+     "timbre": "triangle",
+     "gain": 0.14,
+     "expr": "[hz(140 + 220 * H(j + 5)) + pj * 0.9, (H(j) < 0.75 ? exp(-pj * 9) : 0) * e]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "gürleme",
+     "timbre": "saw",
+     "gain": 0.12,
+     "expr": "[hz(42) + 0.08 * (N1(t * 3) - 0.5), e * (0.6 + 0.4 * N1(t * 0.8))]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "alev",
+     "timbre": "triangle",
+     "gain": 0.09,
+     "expr": "[J(300, 150, 7), e * (0.35 + 0.65 * N1(t * 5))]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "alev 2",
+     "timbre": "saw",
+     "gain": 0.06,
+     "expr": "[J(120, 90, 8), e]",
+     "color": "#f4f1ea"
+    }
+   ]
+  },
+  {
+   "name": "ember_rise",
+   "duration": 4.6,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst tk = t - 3.7, e = env(0.5, 0.4) * (t < 3.7 ? 1 : exp(-tk * 3));\nconst g = 0.5 + 0.5 * N1(t * 14), k = floor(t * 30), pk = frac(t * 30);",
+   "voices": [
+    {
+     "name": "taş",
+     "timbre": "saw",
+     "gain": 0.22,
+     "expr": "[hz(58 + 14 * t / D) + 0.45 * (N1(t * 26) - 0.5), e * g]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "gıcırtı",
+     "timbre": "square",
+     "gain": 0.1,
+     "expr": "[hz(95 + 20 * t / D) + 0.35 * (N1(t * 33 + 9) - 0.5), e * (1 - g) * 0.9]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "zemin",
+     "timbre": "sine",
+     "gain": 0.35,
+     "expr": "[hz(34), e]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "çakıl",
+     "timbre": "noise",
+     "gain": 0.12,
+     "expr": "[0, H(k) < 0.25 ? exp(-pk * 14) * e : 0]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "adım",
+     "timbre": "sine",
+     "gain": 0.6,
+     "expr": "tk > 0 ? [hz(36 + 44 * exp(-25 * tk)), exp(-4.5 * tk) * min(1, tk * 300)] : REST",
+     "color": "#c77dff"
+    },
+    {
+     "name": "çatlak",
+     "timbre": "noise",
+     "gain": 0.18,
+     "expr": "tk > 0 ? [0, exp(-10 * tk)] : REST",
+     "color": "#f4f1ea"
+    }
+   ]
+  },
+  {
+   "name": "ember_roar",
+   "duration": 4.2,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = min(1, t / 0.3) * min(1, max(0, (D - t) / 1.0)) * (0.85 + 0.15 * sin(TAU * 1.2 * t));\nconst c = 0.18 * sin(PI * min(1, t / D * 1.3)) - 0.12 * t / D, v = 0.025 * sin(TAU * 5.5 * t);\nconst gr = 0.14 * sin(TAU * 31 * t) * (0.5 + 0.5 * N1(t * 7));",
+   "voices": [
+    {
+     "name": "gövde",
+     "timbre": "saw",
+     "gain": 0.28,
+     "expr": "[hz(87) + c + v + gr, e]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "boğaz",
+     "timbre": "square",
+     "gain": 0.13,
+     "expr": "[hz(130.8) + c + v + gr * 0.8, e * 0.9]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "göğüs",
+     "timbre": "saw",
+     "gain": 0.2,
+     "expr": "[hz(58) + c * 0.7 + gr, e]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "ağız",
+     "timbre": "triangle",
+     "gain": 0.1,
+     "expr": "[hz(174) + c + v + gr * 0.5, e * (0.6 + 0.4 * N1(t * 3))]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "üst",
+     "timbre": "triangle",
+     "gain": 0.06,
+     "expr": "[hz(348) + c + v, e * 0.5]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "nefes",
+     "timbre": "triangle",
+     "gain": 0.09,
+     "expr": "[J(350, 180, 9), e * (0.5 + 0.5 * N1(t * 20))]",
+     "color": "#f4f1ea"
+    },
+    {
+     "name": "alt",
+     "timbre": "sine",
+     "gain": 0.3,
+     "expr": "[hz(43) + c * 0.5, e]",
+     "color": "#ff9b87"
+    }
+   ]
+  },
+  {
+   "name": "ember_throw",
+   "duration": 2.4,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst b = exp(-(((t - 0.95) / 0.38) ** 2));\nconst sp = 0.35 + 0.65 * Math.pow(max(0, sin(TAU * 6.5 * t)), 2);\nconst dop = hz(70) + 1.2 / (1 + exp((t - 0.95) * 7));",
+   "voices": [
+    {
+     "name": "hava",
+     "timbre": "triangle",
+     "gain": 0.3,
+     "expr": "[J(500, 300, 10), b * sp]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "hava 2",
+     "timbre": "sine",
+     "gain": 0.25,
+     "expr": "[J(250, 200, 11), b * sp]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "kum",
+     "timbre": "noise",
+     "gain": 0.05,
+     "expr": "[0, b * sp]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "vınlama",
+     "timbre": "saw",
+     "gain": 0.16,
+     "expr": "[dop + 0.05 * sin(TAU * 13 * t), b * sp]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "ağırlık",
+     "timbre": "sine",
+     "gain": 0.42,
+     "expr": "[dop - 1, b]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "ıslık",
+     "timbre": "triangle",
+     "gain": 0.08,
+     "expr": "[dop + 2, b * sp * 0.6]",
+     "color": "#f4f1ea"
+    }
+   ]
+  },
+  {
+   "name": "void_air",
+   "duration": 7,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = env(2, 2), w = N1(t * 1.1);",
+   "voices": [
+    {
+     "name": "koro 1",
+     "timbre": "triangle",
+     "gain": 0.14,
+     "expr": "[hz(207.65) + 0.006 * sin(TAU * 4.3 * t), e * (0.5 + 0.5 * sin(t * 0.7))]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "koro 2",
+     "timbre": "triangle",
+     "gain": 0.12,
+     "expr": "[hz(311.1 * 1.006) + 0.006 * sin(TAU * 3.7 * t), e * (0.5 + 0.5 * sin(t * 0.53 + 2))]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "koro 3",
+     "timbre": "triangle",
+     "gain": 0.1,
+     "expr": "[hz(440 * 0.994), e * (0.5 + 0.5 * sin(t * 0.41 + 4))]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "ıslık",
+     "timbre": "sine",
+     "gain": 0.06,
+     "expr": "[hz(1100 + 400 * N1(t * 0.6)) + 0.01 * sin(TAU * 6 * t), e * w]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "derin",
+     "timbre": "saw",
+     "gain": 0.1,
+     "expr": "[hz(55) + 0.01 * sin(t * 0.5), e]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "rüzgar",
+     "timbre": "sine",
+     "gain": 0.07,
+     "expr": "[J(700, 180, 12), e * (0.25 + 0.75 * w)]",
+     "color": "#f4f1ea"
+    },
+    {
+     "name": "rüzgar 2",
+     "timbre": "triangle",
+     "gain": 0.06,
+     "expr": "[J(350, 140, 13), e * (0.25 + 0.75 * w)]",
+     "color": "#ff9b87"
+    }
+   ]
+  },
+  {
+   "name": "void_wing",
+   "duration": 1.2,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst a = t < 0.14 ? t / 0.14 : exp(-(t - 0.14) * 6);",
+   "voices": [
+    {
+     "name": "hava",
+     "timbre": "triangle",
+     "gain": 0.35,
+     "expr": "[J(300, 300, 14), a * a]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "hava 2",
+     "timbre": "sine",
+     "gain": 0.3,
+     "expr": "[J(150, 250, 15), a * a]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "vuruş",
+     "timbre": "sine",
+     "gain": 0.5,
+     "expr": "[hz(55 + 60 * exp(-18 * t)), exp(-6 * t) * min(1, t * 80)]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "dalgalanma",
+     "timbre": "noise",
+     "gain": 0.06,
+     "expr": "[0, a * (0.5 + 0.5 * sin(TAU * 38 * t))]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "zar",
+     "timbre": "triangle",
+     "gain": 0.12,
+     "expr": "[hz(110 + 60 * exp(-10 * t)), a]",
+     "color": "#c77dff"
+    }
+   ]
+  },
+  {
+   "name": "void_roar",
+   "duration": 4.6,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst e = min(1, t / 0.25) * min(1, max(0, (D - t) / 1.1));\nconst c = t < 2.2 ? 0.45 * sin(PI * t / 2.2) : -0.25 * (t - 2.2) / 2.4;\nconst gr = 0.2 * sin(TAU * 44 * t) * (0.4 + 0.6 * N1(t * 10));\nconst sh = Math.pow(sin(PI * min(1, max(0, (t - 0.4) / 2.4))), 2);",
+   "voices": [
+    {
+     "name": "gövde",
+     "timbre": "saw",
+     "gain": 0.26,
+     "expr": "[hz(140) + c + gr, e]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "boğaz",
+     "timbre": "square",
+     "gain": 0.12,
+     "expr": "[hz(280) + c + gr * 0.7, e * 0.8]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "göğüs",
+     "timbre": "saw",
+     "gain": 0.18,
+     "expr": "[hz(70) + c * 0.6 + gr, e]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "çığlık",
+     "timbre": "triangle",
+     "gain": 0.07,
+     "expr": "[hz(900) + c * 1.2 + 0.04 * sin(TAU * 9 * t), e * sh]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "çığlık 2",
+     "timbre": "triangle",
+     "gain": 0.06,
+     "expr": "[hz(1340) + c * 1.2 + 0.05 * sin(TAU * 11 * t), e * sh * 0.7]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "nefes",
+     "timbre": "triangle",
+     "gain": 0.1,
+     "expr": "[J(500, 220, 16), e * (0.5 + 0.5 * N1(t * 24))]",
+     "color": "#f4f1ea"
+    },
+    {
+     "name": "alt",
+     "timbre": "sine",
+     "gain": 0.3,
+     "expr": "[hz(46) + c * 0.4, e]",
+     "color": "#ff9b87"
+    }
+   ]
+  },
+  {
+   "name": "void_dive",
+   "duration": 2.8,
+   "defs": "const TAU = 2 * PI;\nconst H = (n) => frac(sin(n * 127.1 + 311.7) * 43758.5453);\nconst N1 = (u) => { const i = floor(u), f = u - i, s = f * f * (3 - 2 * f); return H(i) * (1 - s) + H(i + 1) * s; };\nconst hz = (f) => log2(f / 329.63);\nconst J = (c, r, sd) => hz(c) + 1.1 * (N1(t * r + sd) - 0.5) + 0.5 * (N1(t * r * 2.3 + sd * 3) - 0.5);\nconst env = (a, r) => min(1, t / a) * min(1, max(0, (D - t) / r));\nconst b = exp(-(((t - 1.2) / 0.5) ** 2));\nconst dop = hz(110) + 1.4 / (1 + exp((t - 1.2) * 5));\nconst fl = 0.5 + 0.5 * Math.pow(max(0, sin(TAU * 4 * t)), 2);",
+   "voices": [
+    {
+     "name": "hava",
+     "timbre": "triangle",
+     "gain": 0.3,
+     "expr": "[J(600, 300, 17), b * fl]",
+     "color": "#ff6b5b"
+    },
+    {
+     "name": "hava 2",
+     "timbre": "sine",
+     "gain": 0.25,
+     "expr": "[J(280, 220, 18), b * fl]",
+     "color": "#f2c14e"
+    },
+    {
+     "name": "kum",
+     "timbre": "noise",
+     "gain": 0.05,
+     "expr": "[0, b * fl]",
+     "color": "#5fd3b5"
+    },
+    {
+     "name": "vınlama",
+     "timbre": "saw",
+     "gain": 0.16,
+     "expr": "[dop + 0.04 * sin(TAU * 9 * t), b]",
+     "color": "#9fd3ff"
+    },
+    {
+     "name": "ıslık",
+     "timbre": "triangle",
+     "gain": 0.1,
+     "expr": "[dop + 1.58, b * 0.7]",
+     "color": "#c77dff"
+    },
+    {
+     "name": "ağırlık",
+     "timbre": "sine",
+     "gain": 0.4,
+     "expr": "[dop - 1.3, b]",
+     "color": "#f4f1ea"
+    }
+   ]
+  }
+ ]
+}

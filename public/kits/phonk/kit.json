@@ -1,0 +1,66 @@
+{
+  "kit": "phonk",
+  "source": "ElevenLabs TTS (eleven_multilingual_v2)",
+  "items": [
+    {
+      "file": "ei-harry.wav",
+      "text": "Ei!",
+      "voice": "Harry"
+    },
+    {
+      "file": "vai-harry.wav",
+      "text": "Vai!",
+      "voice": "Harry"
+    },
+    {
+      "file": "toma-harry.wav",
+      "text": "Toma!",
+      "voice": "Harry"
+    },
+    {
+      "file": "vem-harry.wav",
+      "text": "Vem!",
+      "voice": "Harry"
+    },
+    {
+      "file": "uh-harry.wav",
+      "text": "Uh!",
+      "voice": "Harry"
+    },
+    {
+      "file": "aah-harry.wav",
+      "text": "Aaaaah!",
+      "voice": "Harry"
+    },
+    {
+      "file": "ei-charlie.wav",
+      "text": "Ei!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "vai-charlie.wav",
+      "text": "Vai!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "toma-charlie.wav",
+      "text": "Toma!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "vem-charlie.wav",
+      "text": "Vem!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "uh-charlie.wav",
+      "text": "Uh!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "aah-charlie.wav",
+      "text": "Aaaaah!",
+      "voice": "Charlie"
+    }
+  ]
+}

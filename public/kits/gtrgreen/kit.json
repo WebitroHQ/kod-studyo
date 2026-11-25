@@ -1,0 +1,478 @@
+{
+ "kit": "gtrgreen",
+ "label": "Elektro gitar — Gretsch (Karoryfer, temiz)",
+ "license": "CC0 1.0 (Karoryfer Black And Green Guitars)",
+ "source": "https://github.com/sfzinstruments/karoryfer.black-and-green-guitars/tree/main/Samples/green/ord",
+ "zones": [
+  {
+   "note": 40,
+   "vel": 1,
+   "file": "twang_e3_mf_rr1.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 1,
+   "file": "twang_f3_mf_rr1.mp3"
+  },
+  {
+   "note": 42,
+   "vel": 1,
+   "file": "twang_gb3_mf_rr1.mp3"
+  },
+  {
+   "note": 43,
+   "vel": 1,
+   "file": "twang_g3_mf_rr1.mp3"
+  },
+  {
+   "note": 44,
+   "vel": 1,
+   "file": "twang_ab3_mf_rr1.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 1,
+   "file": "twang_a3_mf_rr1.mp3"
+  },
+  {
+   "note": 46,
+   "vel": 1,
+   "file": "twang_bb3_mf_rr1.mp3"
+  },
+  {
+   "note": 47,
+   "vel": 1,
+   "file": "twang_b3_mf_rr1.mp3"
+  },
+  {
+   "note": 48,
+   "vel": 1,
+   "file": "twang_c4_mf_rr1.mp3"
+  },
+  {
+   "note": 49,
+   "vel": 1,
+   "file": "twang_db4_mf_rr1.mp3"
+  },
+  {
+   "note": 50,
+   "vel": 1,
+   "file": "twang_d4_mf_rr1.mp3"
+  },
+  {
+   "note": 51,
+   "vel": 1,
+   "file": "twang_eb4_mf_rr1.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 1,
+   "file": "twang_e4_mf_rr1.mp3"
+  },
+  {
+   "note": 53,
+   "vel": 1,
+   "file": "twang_f4_mf_rr1.mp3"
+  },
+  {
+   "note": 54,
+   "vel": 1,
+   "file": "twang_gb4_mf_rr1.mp3"
+  },
+  {
+   "note": 55,
+   "vel": 1,
+   "file": "twang_g4_mf_rr1.mp3"
+  },
+  {
+   "note": 56,
+   "vel": 1,
+   "file": "twang_ab4_mf_rr1.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 1,
+   "file": "twang_a4_mf_rr1.mp3"
+  },
+  {
+   "note": 58,
+   "vel": 1,
+   "file": "twang_bb4_mf_rr1.mp3"
+  },
+  {
+   "note": 59,
+   "vel": 1,
+   "file": "twang_b4_mf_rr1.mp3"
+  },
+  {
+   "note": 60,
+   "vel": 1,
+   "file": "twang_c5_mf_rr1.mp3"
+  },
+  {
+   "note": 61,
+   "vel": 1,
+   "file": "twang_db5_mf_rr1.mp3"
+  },
+  {
+   "note": 62,
+   "vel": 1,
+   "file": "twang_d5_mf_rr1.mp3"
+  },
+  {
+   "note": 63,
+   "vel": 1,
+   "file": "twang_eb5_mf_rr1.mp3"
+  },
+  {
+   "note": 64,
+   "vel": 1,
+   "file": "twang_e5_mf_rr1.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 1,
+   "file": "twang_f5_mf_rr1.mp3"
+  },
+  {
+   "note": 66,
+   "vel": 1,
+   "file": "twang_gb5_mf_rr1.mp3"
+  },
+  {
+   "note": 67,
+   "vel": 1,
+   "file": "twang_g5_mf_rr1.mp3"
+  },
+  {
+   "note": 68,
+   "vel": 1,
+   "file": "twang_ab5_mf_rr1.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 1,
+   "file": "twang_a5_mf_rr1.mp3"
+  },
+  {
+   "note": 70,
+   "vel": 1,
+   "file": "twang_bb5_mf_rr1.mp3"
+  },
+  {
+   "note": 71,
+   "vel": 1,
+   "file": "twang_b5_mf_rr1.mp3"
+  },
+  {
+   "note": 72,
+   "vel": 1,
+   "file": "twang_c6_mf_rr1.mp3"
+  },
+  {
+   "note": 73,
+   "vel": 1,
+   "file": "twang_db6_mf_rr1.mp3"
+  },
+  {
+   "note": 74,
+   "vel": 1,
+   "file": "twang_d6_mf_rr1.mp3"
+  },
+  {
+   "note": 75,
+   "vel": 1,
+   "file": "twang_eb6_mf_rr1.mp3"
+  },
+  {
+   "note": 76,
+   "vel": 1,
+   "file": "twang_e6_mf_rr1.mp3"
+  },
+  {
+   "note": 77,
+   "vel": 1,
+   "file": "twang_f6_mf_rr1.mp3"
+  },
+  {
+   "note": 78,
+   "vel": 1,
+   "file": "twang_gb6_mf_rr1.mp3"
+  },
+  {
+   "note": 79,
+   "vel": 1,
+   "file": "twang_g6_mf_rr1.mp3"
+  },
+  {
+   "note": 80,
+   "vel": 1,
+   "file": "twang_ab6_mf_rr1.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 1,
+   "file": "twang_a6_mf_rr1.mp3"
+  },
+  {
+   "note": 82,
+   "vel": 1,
+   "file": "twang_bb6_mf_rr1.mp3"
+  },
+  {
+   "note": 83,
+   "vel": 1,
+   "file": "twang_b6_mf_rr1.mp3"
+  },
+  {
+   "note": 84,
+   "vel": 1,
+   "file": "twang_c7_mf_rr1.mp3"
+  },
+  {
+   "note": 85,
+   "vel": 1,
+   "file": "twang_db7_mf_rr1.mp3"
+  },
+  {
+   "note": 86,
+   "vel": 1,
+   "file": "twang_d7_mf_rr1.mp3"
+  },
+  {
+   "note": 40,
+   "vel": 2,
+   "file": "twang_e3_f_rr1.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 2,
+   "file": "twang_f3_f_rr1.mp3"
+  },
+  {
+   "note": 42,
+   "vel": 2,
+   "file": "twang_gb3_f_rr1.mp3"
+  },
+  {
+   "note": 43,
+   "vel": 2,
+   "file": "twang_g3_f_rr1.mp3"
+  },
+  {
+   "note": 44,
+   "vel": 2,
+   "file": "twang_ab3_f_rr1.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 2,
+   "file": "twang_a3_f_rr1.mp3"
+  },
+  {
+   "note": 46,
+   "vel": 2,
+   "file": "twang_bb3_f_rr1.mp3"
+  },
+  {
+   "note": 47,
+   "vel": 2,
+   "file": "twang_b3_f_rr1.mp3"
+  },
+  {
+   "note": 48,
+   "vel": 2,
+   "file": "twang_c4_f_rr1.mp3"
+  },
+  {
+   "note": 49,
+   "vel": 2,
+   "file": "twang_db4_f_rr1.mp3"
+  },
+  {
+   "note": 50,
+   "vel": 2,
+   "file": "twang_d4_f_rr1.mp3"
+  },
+  {
+   "note": 51,
+   "vel": 2,
+   "file": "twang_eb4_f_rr1.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 2,
+   "file": "twang_e4_f_rr1.mp3"
+  },
+  {
+   "note": 53,
+   "vel": 2,
+   "file": "twang_f4_f_rr1.mp3"
+  },
+  {
+   "note": 54,
+   "vel": 2,
+   "file": "twang_gb4_f_rr1.mp3"
+  },
+  {
+   "note": 55,
+   "vel": 2,
+   "file": "twang_g4_f_rr1.mp3"
+  },
+  {
+   "note": 56,
+   "vel": 2,
+   "file": "twang_ab4_f_rr1.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 2,
+   "file": "twang_a4_f_rr1.mp3"
+  },
+  {
+   "note": 58,
+   "vel": 2,
+   "file": "twang_bb4_f_rr1.mp3"
+  },
+  {
+   "note": 59,
+   "vel": 2,
+   "file": "twang_b4_f_rr1.mp3"
+  },
+  {
+   "note": 60,
+   "vel": 2,
+   "file": "twang_c5_f_rr1.mp3"
+  },
+  {
+   "note": 61,
+   "vel": 2,
+   "file": "twang_db5_f_rr1.mp3"
+  },
+  {
+   "note": 62,
+   "vel": 2,
+   "file": "twang_d5_f_rr1.mp3"
+  },
+  {
+   "note": 63,
+   "vel": 2,
+   "file": "twang_eb5_f_rr1.mp3"
+  },
+  {
+   "note": 64,
+   "vel": 2,
+   "file": "twang_e5_f_rr1.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 2,
+   "file": "twang_f5_f_rr1.mp3"
+  },
+  {
+   "note": 66,
+   "vel": 2,
+   "file": "twang_gb5_f_rr1.mp3"
+  },
+  {
+   "note": 67,
+   "vel": 2,
+   "file": "twang_g5_f_rr1.mp3"
+  },
+  {
+   "note": 68,
+   "vel": 2,
+   "file": "twang_ab5_f_rr1.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 2,
+   "file": "twang_a5_f_rr1.mp3"
+  },
+  {
+   "note": 70,
+   "vel": 2,
+   "file": "twang_bb5_f_rr1.mp3"
+  },
+  {
+   "note": 71,
+   "vel": 2,
+   "file": "twang_b5_f_rr1.mp3"
+  },
+  {
+   "note": 72,
+   "vel": 2,
+   "file": "twang_c6_f_rr1.mp3"
+  },
+  {
+   "note": 73,
+   "vel": 2,
+   "file": "twang_db6_f_rr1.mp3"
+  },
+  {
+   "note": 74,
+   "vel": 2,
+   "file": "twang_d6_f_rr1.mp3"
+  },
+  {
+   "note": 75,
+   "vel": 2,
+   "file": "twang_eb6_f_rr1.mp3"
+  },
+  {
+   "note": 76,
+   "vel": 2,
+   "file": "twang_e6_f_rr1.mp3"
+  },
+  {
+   "note": 77,
+   "vel": 2,
+   "file": "twang_f6_f_rr1.mp3"
+  },
+  {
+   "note": 78,
+   "vel": 2,
+   "file": "twang_gb6_f_rr1.mp3"
+  },
+  {
+   "note": 79,
+   "vel": 2,
+   "file": "twang_g6_f_rr1.mp3"
+  },
+  {
+   "note": 80,
+   "vel": 2,
+   "file": "twang_ab6_f_rr1.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 2,
+   "file": "twang_a6_f_rr1.mp3"
+  },
+  {
+   "note": 82,
+   "vel": 2,
+   "file": "twang_bb6_f_rr1.mp3"
+  },
+  {
+   "note": 83,
+   "vel": 2,
+   "file": "twang_b6_f_rr1.mp3"
+  },
+  {
+   "note": 84,
+   "vel": 2,
+   "file": "twang_c7_f_rr1.mp3"
+  },
+  {
+   "note": 85,
+   "vel": 2,
+   "file": "twang_db7_f_rr1.mp3"
+  },
+  {
+   "note": 86,
+   "vel": 2,
+   "file": "twang_d7_f_rr1.mp3"
+  }
+ ]
+}

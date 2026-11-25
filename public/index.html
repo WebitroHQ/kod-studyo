@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kod Stüdyo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">◆</span> Kod Stüdyo</div>
+  <div class="seg" id="viewSeg">
+    <button data-view="suno" class="on">Şarkı iste</button>
+    <button data-view="studio">Stüdyo</button>
+    <button data-view="formul">Formül</button>
+  </div>
+  <div class="transport">
+    <button id="btnPlay" class="big" title="Çal / Durdur (Boşluk)">▶</button>
+    <div class="seg" id="modeSeg">
+      <button data-mode="pattern" class="on" title="Seçili deseni döngüde çal">Desen</button>
+      <button data-mode="song" title="Tüm aranjmanı çal">Şarkı</button>
+    </div>
+    <div class="lcd" id="lcd">1.1.1</div>
+  </div>
+  <div class="globals">
+    <label>BPM <input id="bpm" type="number" min="40" max="220" step="1"></label>
+    <label>Swing <input id="swing" type="range" min="0" max="0.6" step="0.01"></label>
+    <label>Ton <select id="root"></select></label>
+    <label>Ölçek <select id="scale"></select></label>
+  </div>
+  <div class="files">
+    <select id="demoSel" title="Hazır şarkılar"><option value="">Hazır şarkılar…</option></select>
+    <button id="btnUndo" title="Geri al (Ctrl+Z)">↶</button>
+    <button id="btnSave" title="Projeyi JSON olarak kaydet">Kaydet</button>
+    <label class="btn" title="JSON projesi aç">Aç<input id="fileOpen" type="file" accept=".json,application/json" hidden></label>
+    <button id="btnWav" class="accent" title="Şarkıyı WAV olarak dışa aktar">WAV ↓</button>
+    <button id="btnSettings" title="API anahtarları">⚙</button>
+  </div>
+</header>
+
+<main class="formul" id="formulView">
+  <section class="fx-side">
+    <div class="row">
+      <select id="fxPreset"><option value="">Hazır formüller…</option></select>
+      <label>Tını <select id="fxTimbre"></select></label>
+    </div>
+    <div class="seg fx-tabs" id="fxSections"></div>
+    <div id="fxEditor" class="fx-editor"></div>
+    <p class="hint">Yardımcılar: <code>floor mod frac exp digit(N,taban,i) seg(p,[[nota,a,b],…]) note(m) midi(m) REST</code>.
+      y = 0 → E4, y = 1 bir oktav yukarı; <code>note(m)</code> videodaki gibi −0.33496 + (m−72)/12, <code>midi(m)</code> gerçek MIDI notası.</p>
+  </section>
+  <section class="fx-main">
+    <div class="fx-graph">
+      <div class="fx-brand">matharium tarzı</div>
+      <div class="fx-label" id="fxLabel"></div>
+      <canvas id="fxCanvas" width="720" height="460"></canvas>
+    </div>
+    <p class="err" id="fxError"></p>
+    <div class="row">
+      <button id="fxPlay" class="accent">▶ Bölümü çal</button>
+      <button id="fxPlayAll">▶ Hepsini çal</button>
+      <span class="spacer"></span>
+      <button id="fxWav">WAV ↓</button>
+      <button id="fxStudio" title="Formül şarkısını stüdyoda sampler kanalı olarak ekle">Stüdyoya ekle</button>
+    </div>
+  </section>
+</main>
+
+<main class="suno" id="sunoView">
+  <section class="sn-main">
+    <h1>Ne tür bir şarkı istiyorsun?</h1>
+    <textarea id="snText" rows="3" placeholder="ör. gece İstanbul'da araba sürmek hakkında, hızlı elektro gitarlı, sert 808'li duygusal bir şarkı"></textarea>
+    <div class="row sn-opts">
+      <label>Tarz <select id="snStyle"></select></label>
+      <label>Vokal <select id="snVocal"><option value="voc">Vokalli</option><option value="inst">Enstrümantal</option></select></label>
+      <label>Dil <select id="snLang"></select></label>
+      <label>Süre <select id="snLen"><option value="30">30 sn</option><option value="60">1 dk</option><option value="120" selected>2 dk</option><option value="180">3 dk</option></select></label>
+      <label>Ad <input id="snTitle" placeholder="(isteğe bağlı)"></label>
+    </div>
+    <p class="hint" id="snWhy"></p>
+    <details class="sn-instr" open>
+      <summary>Enstrümanlar <span class="hint">tarzı seçince önerilenler otomatik işaretlenir · yazdığın enstrümanlar da algılanır · istediğini aç/kapat</span></summary>
+      <div id="snInstr"></div>
+    </details>
+    <div id="snLyricsWrap">
+      <details><summary>Kendi sözlerim var</summary>
+        <textarea id="snLyrics" rows="5" placeholder="[Nakarat]&#10;..."></textarea>
+      </details>
+    </div>
+    <div class="row sn-actions">
+      <button id="snQuick" class="accent big2">Şarkıyı üret</button>
+      <button id="snPlan" title="Ücretsiz: bölümleri ve sözleri önce gör, düzenle">Önce planla (sözleri gör)</button>
+      <button id="snLocal" title="AI'sız, kod motoruyla aynı isteği stüdyoda üret">Kod motoruyla yap → Stüdyo</button>
+    </div>
+    <p class="hint" id="snStatus"></p>
+    <details class="sn-prev"><summary>Modele gidecek istek</summary><pre id="snPreview"></pre></details>
+    <div id="snPlanEd" class="sn-plan" hidden></div>
+  </section>
+  <aside class="sn-lib">
+    <h3>Şarkılarım</h3>
+    <div id="snLib"></div>
+  </aside>
+</main>
+
+<main class="layout">
+  <aside class="side">
+    <section class="panel">
+      <h3>Kendi motoruyla üret <small>AI'sız</small></h3>
+      <label>Tarz <select id="genre"></select></label>
+      <p class="hint" id="genreDesc"></p>
+      <div class="row">
+        <label>Ruh hali <select id="mood"><option value="">Tarzın kendisi</option><option value="dark">Karanlık</option><option value="bright">Aydınlık</option></select></label>
+        <label>Seed <input id="seed" type="text" size="7"></label>
+        <button id="btnDice" title="Yeni seed">🎲</button>
+      </div>
+      <div class="row">
+        <label>Uzunluk <select id="songLen"><option value="1">Kısa (~30 sn)</option><option value="3" selected>Orta (~1.5 dk)</option><option value="5">Uzun (~2.5 dk)</option></select></label>
+        <label class="check"><input id="keepTempo" type="checkbox"> BPM/tonu koru</label>
+      </div>
+      <button id="btnGenerate" class="accent wide">Şarkı üret</button>
+    </section>
+
+    <section class="panel">
+      <h3>Yazarak iste</h3>
+      <textarea id="prompt" rows="3" placeholder="ör. karanlık brazilian phonk 130 bpm, ağır 808, vokalsiz"></textarea>
+      <div class="row">
+        <button id="btnPromptLocal" class="wide" title="Anahtar gerekmez">Motorla yap</button>
+        <button id="btnPromptAI" class="wide ai" title="Claude sıfırdan besteler">AI besteler</button>
+      </div>
+      <button id="btnPromptEdit" class="wide ai" title="Claude mevcut şarkıyı isteğe göre düzenler">AI mevcut şarkıyı düzenlesin</button>
+      <p class="hint" id="promptInfo"></p>
+    </section>
+
+    <section class="panel">
+      <h3>AI ses üret <small>ElevenLabs</small></h3>
+      <div class="seg wide" id="audioKind">
+        <button data-kind="sfx" class="on">Efekt/sample</button>
+        <button data-kind="voice">Vokal (söz)</button>
+        <button data-kind="music">Müzik parçası</button>
+      </div>
+      <textarea id="audioPrompt" rows="2" placeholder="ör. distorted 808 cowbell hit / 'ey ey' bağırışı / dark phonk loop"></textarea>
+      <div class="row">
+        <label>Süre (sn) <input id="audioSecs" type="number" min="1" max="60" value="3" style="width:56px"></label>
+        <select id="voiceSel" hidden></select>
+      </div>
+      <button id="btnAudio" class="wide ai">Üret → sampler kanalı</button>
+      <label class="btn wide">Kendi sample'ını yükle<input id="fileSample" type="file" accept="audio/*" hidden></label>
+      <p class="hint" id="audioInfo"></p>
+    </section>
+  </aside>
+
+  <section class="center">
+    <div class="arr">
+      <div class="arr-head"><b>Aranjman</b>
+        <span class="hint">bölüme tıkla → desenini düzenle · çift tık → ad</span>
+        <span class="spacer"></span>
+        <button id="btnAddSec" title="Seçili desenin kopyasıyla yeni bölüm">+ Bölüm</button>
+        <button id="btnLinkSec" title="Seçili deseni tekrar kullanan bölüm ekle">+ Aynı desen</button>
+      </div>
+      <div class="chips" id="arrChips"></div>
+    </div>
+
+    <div class="rack-head">
+      <b>Kanal rafı</b> <span id="patLabel" class="pill"></span>
+      <span class="hint">tık: vuruş · sağ tık: roll (2/3/4) · shift+tık: hafif</span>
+      <span class="spacer"></span>
+      <select id="addInst"></select>
+      <button id="btnAddTrack">+ Kanal</button>
+      <button id="btnClearPat" title="Bu desendeki tüm notaları sil">Deseni temizle</button>
+    </div>
+    <div class="rack" id="rack"></div>
+
+    <div class="roll-wrap">
+      <div class="roll-head">
+        <b>Piyano rulosu</b> <span id="rollTrack" class="pill"></span>
+        <span class="hint">tık: nota ekle/sil · alt+tık: glide · ölçeğe kilitli</span>
+        <span class="spacer"></span>
+        <label>Uzunluk <select id="noteLen"><option>1</option><option selected>2</option><option>4</option><option>8</option><option>16</option><option>32</option></select></label>
+        <label class="check"><input id="chromatic" type="checkbox"> Kromatik</label>
+        <button id="btnRegenRoll" title="Bu kanalı bu desen için yeniden üret">🎲 Yeniden üret</button>
+      </div>
+      <div class="roll" id="roll"></div>
+    </div>
+
+    <div class="params" id="params"></div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="mixer" id="mixer"></div>
+  <div class="master" id="master">
+    <h3>Master</h3>
+    <div class="row">
+      <label>Preset <select id="masterPreset"></select></label>
+      <label>Hedef <select id="masterTarget">
+        <option value="-8">Çok yüksek (-8)</option><option value="-9.5">Yüksek (-9.5)</option>
+        <option value="-11" selected>Dengeli (-11)</option><option value="-14">Dinamik (-14)</option><option value="-16">Sakin (-16)</option>
+      </select></label>
+      <button id="btnAutoMaster" class="accent">Oto-Master</button>
+    </div>
+    <div class="knobs" id="masterKnobs"></div>
+    <canvas id="scope" width="300" height="60"></canvas>
+    <div class="meter"><div id="meterBar"></div></div>
+    <p class="hint" id="masterInfo"></p>
+  </div>
+</footer>
+
+<dialog id="dlgSettings">
+  <form method="dialog">
+    <h3>AI ayarları (isteğe bağlı)</h3>
+    <p class="hint">Anahtarlar yalnızca bu tarayıcıda saklanır ve yerel sunucuya gider. Alternatif: <code>kod-studyo/.env</code> dosyası.</p>
+    <label>Anthropic API anahtarı <input id="setAnthropic" type="password" autocomplete="off"></label>
+    <label>Model <select id="setModel">
+      <option value="claude-opus-5-5">Claude Opus 5.5 (en iyi)</option>
+      <option value="claude-sonnet-5-5">Claude Sonnet 5.5 (hızlı/ucuz)</option>
+      <option value="claude-haiku-5-5">Claude Haiku 5.5 (en ucuz)</option>
+    </select></label>
+    <label>Düşünme eforu <select id="setEffort"><option value="low">Düşük</option><option value="medium" selected>Orta</option><option value="high">Yüksek</option></select></label>
+    <label>ElevenLabs API anahtarı <input id="setEleven" type="password" autocomplete="off"></label>
+    <p class="hint" id="serverKeys"></p>
+    <div class="row"><button type="button" value="cancel" onclick="this.closest('dialog').close('cancel')">Vazgeç</button><span class="spacer"></span><button id="btnSettingsSave" value="ok" class="accent">Kaydet</button></div>
+  </form>
+</dialog>
+
+<div id="toast"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

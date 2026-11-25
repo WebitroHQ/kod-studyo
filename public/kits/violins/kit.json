@@ -1,0 +1,118 @@
+{
+ "kit": "violins",
+ "label": "Keman seksiyonu (sustain, vibrato)",
+ "license": "CC0 1.0 (VSCO 2 Community Edition, Versilian Studios)",
+ "source": "https://github.com/sgossner/VSCO-2-CE/tree/master/Strings/Violin Section/susVib",
+ "zones": [
+  {
+   "note": 43,
+   "vel": 1,
+   "file": "VlnEns_susVib_G2_v1.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 1,
+   "file": "VlnEns_susVib_A2_v1.mp3"
+  },
+  {
+   "note": 47,
+   "vel": 1,
+   "file": "VlnEns_susVib_B2_v1.mp3"
+  },
+  {
+   "note": 50,
+   "vel": 1,
+   "file": "VlnEns_susVib_D3_v1.mp3"
+  },
+  {
+   "note": 54,
+   "vel": 1,
+   "file": "VlnEns_susVib_F#3_v1.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 1,
+   "file": "VlnEns_susVib_A3_v1.mp3"
+  },
+  {
+   "note": 60,
+   "vel": 1,
+   "file": "VlnEns_susVib_C4_v1.mp3"
+  },
+  {
+   "note": 64,
+   "vel": 1,
+   "file": "VlnEns_susVib_E4_v1.mp3"
+  },
+  {
+   "note": 67,
+   "vel": 1,
+   "file": "VlnEns_susVib_G4_v1.mp3"
+  },
+  {
+   "note": 71,
+   "vel": 1,
+   "file": "VlnEns_susVib_B4_v1.mp3"
+  },
+  {
+   "note": 74,
+   "vel": 1,
+   "file": "VlnEns_susVib_D5_v1.mp3"
+  },
+  {
+   "note": 43,
+   "vel": 2,
+   "file": "VlnEns_susVib_G2_v2.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 2,
+   "file": "VlnEns_susVib_A2_v2.mp3"
+  },
+  {
+   "note": 47,
+   "vel": 2,
+   "file": "VlnEns_susVib_B2_v2.mp3"
+  },
+  {
+   "note": 50,
+   "vel": 2,
+   "file": "VlnEns_susVib_D3_v2.mp3"
+  },
+  {
+   "note": 54,
+   "vel": 2,
+   "file": "VlnEns_susVib_F#3_v2.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 2,
+   "file": "VlnEns_susVib_A3_v2.mp3"
+  },
+  {
+   "note": 60,
+   "vel": 2,
+   "file": "VlnEns_susVib_C4_v2.mp3"
+  },
+  {
+   "note": 64,
+   "vel": 2,
+   "file": "VlnEns_susVib_E4_v2.mp3"
+  },
+  {
+   "note": 67,
+   "vel": 2,
+   "file": "VlnEns_susVib_G4_v2.mp3"
+  },
+  {
+   "note": 71,
+   "vel": 2,
+   "file": "VlnEns_susVib_B4_v2.mp3"
+  },
+  {
+   "note": 74,
+   "vel": 2,
+   "file": "VlnEns_susVib_D5_v2.mp3"
+  }
+ ]
+}

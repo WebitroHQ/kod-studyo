@@ -1,0 +1,243 @@
+{
+ "kit": "gtrstac",
+ "label": "Elektro gitar — Gretsch staccato (Karoryfer)",
+ "license": "CC0 1.0 (Karoryfer Black And Green Guitars)",
+ "source": "https://github.com/sfzinstruments/karoryfer.black-and-green-guitars/tree/main/Samples/green/stac",
+ "zones": [
+  {
+   "note": 40,
+   "vel": 1,
+   "file": "staccato_e3_rr1.mp3"
+  },
+  {
+   "note": 41,
+   "vel": 1,
+   "file": "staccato_f3_rr1.mp3"
+  },
+  {
+   "note": 42,
+   "vel": 1,
+   "file": "staccato_gb3_rr1.mp3"
+  },
+  {
+   "note": 43,
+   "vel": 1,
+   "file": "staccato_g3_rr1.mp3"
+  },
+  {
+   "note": 44,
+   "vel": 1,
+   "file": "staccato_ab3_rr1.mp3"
+  },
+  {
+   "note": 45,
+   "vel": 1,
+   "file": "staccato_a3_rr1.mp3"
+  },
+  {
+   "note": 46,
+   "vel": 1,
+   "file": "staccato_bb3_rr1.mp3"
+  },
+  {
+   "note": 47,
+   "vel": 1,
+   "file": "staccato_b3_rr1.mp3"
+  },
+  {
+   "note": 48,
+   "vel": 1,
+   "file": "staccato_c4_rr1.mp3"
+  },
+  {
+   "note": 49,
+   "vel": 1,
+   "file": "staccato_db4_rr1.mp3"
+  },
+  {
+   "note": 50,
+   "vel": 1,
+   "file": "staccato_d4_rr1.mp3"
+  },
+  {
+   "note": 51,
+   "vel": 1,
+   "file": "staccato_eb4_rr1.mp3"
+  },
+  {
+   "note": 52,
+   "vel": 1,
+   "file": "staccato_e4_rr1.mp3"
+  },
+  {
+   "note": 53,
+   "vel": 1,
+   "file": "staccato_f4_rr1.mp3"
+  },
+  {
+   "note": 54,
+   "vel": 1,
+   "file": "staccato_gb4_rr1.mp3"
+  },
+  {
+   "note": 55,
+   "vel": 1,
+   "file": "staccato_g4_rr1.mp3"
+  },
+  {
+   "note": 56,
+   "vel": 1,
+   "file": "staccato_ab4_rr1.mp3"
+  },
+  {
+   "note": 57,
+   "vel": 1,
+   "file": "staccato_a4_rr1.mp3"
+  },
+  {
+   "note": 58,
+   "vel": 1,
+   "file": "staccato_bb4_rr1.mp3"
+  },
+  {
+   "note": 59,
+   "vel": 1,
+   "file": "staccato_b4_rr1.mp3"
+  },
+  {
+   "note": 60,
+   "vel": 1,
+   "file": "staccato_c5_rr1.mp3"
+  },
+  {
+   "note": 61,
+   "vel": 1,
+   "file": "staccato_db5_rr1.mp3"
+  },
+  {
+   "note": 62,
+   "vel": 1,
+   "file": "staccato_d5_rr1.mp3"
+  },
+  {
+   "note": 63,
+   "vel": 1,
+   "file": "staccato_eb5_rr1.mp3"
+  },
+  {
+   "note": 64,
+   "vel": 1,
+   "file": "staccato_e5_rr1.mp3"
+  },
+  {
+   "note": 65,
+   "vel": 1,
+   "file": "staccato_f5_rr1.mp3"
+  },
+  {
+   "note": 66,
+   "vel": 1,
+   "file": "staccato_gb5_rr1.mp3"
+  },
+  {
+   "note": 67,
+   "vel": 1,
+   "file": "staccato_g5_rr1.mp3"
+  },
+  {
+   "note": 68,
+   "vel": 1,
+   "file": "staccato_ab5_rr1.mp3"
+  },
+  {
+   "note": 69,
+   "vel": 1,
+   "file": "staccato_a5_rr1.mp3"
+  },
+  {
+   "note": 70,
+   "vel": 1,
+   "file": "staccato_bb5_rr1.mp3"
+  },
+  {
+   "note": 71,
+   "vel": 1,
+   "file": "staccato_b5_rr1.mp3"
+  },
+  {
+   "note": 72,
+   "vel": 1,
+   "file": "staccato_c6_rr1.mp3"
+  },
+  {
+   "note": 73,
+   "vel": 1,
+   "file": "staccato_db6_rr1.mp3"
+  },
+  {
+   "note": 74,
+   "vel": 1,
+   "file": "staccato_d6_rr1.mp3"
+  },
+  {
+   "note": 75,
+   "vel": 1,
+   "file": "staccato_eb6_rr1.mp3"
+  },
+  {
+   "note": 76,
+   "vel": 1,
+   "file": "staccato_e6_rr1.mp3"
+  },
+  {
+   "note": 77,
+   "vel": 1,
+   "file": "staccato_f6_rr1.mp3"
+  },
+  {
+   "note": 78,
+   "vel": 1,
+   "file": "staccato_gb6_rr1.mp3"
+  },
+  {
+   "note": 79,
+   "vel": 1,
+   "file": "staccato_g6_rr1.mp3"
+  },
+  {
+   "note": 80,
+   "vel": 1,
+   "file": "staccato_ab6_rr1.mp3"
+  },
+  {
+   "note": 81,
+   "vel": 1,
+   "file": "staccato_a6_rr1.mp3"
+  },
+  {
+   "note": 82,
+   "vel": 1,
+   "file": "staccato_bb6_rr1.mp3"
+  },
+  {
+   "note": 83,
+   "vel": 1,
+   "file": "staccato_b6_rr1.mp3"
+  },
+  {
+   "note": 84,
+   "vel": 1,
+   "file": "staccato_c7_rr1.mp3"
+  },
+  {
+   "note": 85,
+   "vel": 1,
+   "file": "staccato_db7_rr1.mp3"
+  },
+  {
+   "note": 86,
+   "vel": 1,
+   "file": "staccato_d7_rr1.mp3"
+  }
+ ]
+}

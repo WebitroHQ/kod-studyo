@@ -1,0 +1,56 @@
+{
+  "kit": "ankara",
+  "source": "ElevenLabs TTS (eleven_multilingual_v2)",
+  "items": [
+    {
+      "file": "hoppa-harry.wav",
+      "text": "Hoppaa!",
+      "voice": "Harry"
+    },
+    {
+      "file": "oley-harry.wav",
+      "text": "Oleey!",
+      "voice": "Harry"
+    },
+    {
+      "file": "haydi-harry.wav",
+      "text": "Haydi!",
+      "voice": "Harry"
+    },
+    {
+      "file": "ankara-harry.wav",
+      "text": "Ankaraa!",
+      "voice": "Harry"
+    },
+    {
+      "file": "hey-harry.wav",
+      "text": "Hey!",
+      "voice": "Harry"
+    },
+    {
+      "file": "hoppa-charlie.wav",
+      "text": "Hoppaa!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "oley-charlie.wav",
+      "text": "Oleey!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "haydi-charlie.wav",
+      "text": "Haydi!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "ankara-charlie.wav",
+      "text": "Ankaraa!",
+      "voice": "Charlie"
+    },
+    {
+      "file": "hey-charlie.wav",
+      "text": "Hey!",
+      "voice": "Charlie"
+    }
+  ]
+}
