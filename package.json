@@ -89,8 +89,8 @@
       "category": "public.app-category.music",
       "icon": "build/icon.png",
       "artifactName": "KodStudyo-${version}-${arch}.${ext}",
-      "hardenedRuntime": true,
-      "gatekeeperAssess": false
+      "hardenedRuntime": false,
+      "identity": "-"
     },
     "linux": {
       "target": [
